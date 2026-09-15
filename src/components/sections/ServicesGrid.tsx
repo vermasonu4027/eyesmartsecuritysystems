@@ -1,6 +1,16 @@
 import { Link } from "@/i18n/routing";
 import { services } from "@/data/services";
-import * as Icons from "lucide-react";
+import { Camera, Lock, Video, AlertCircle, Headphones, Zap, Shield } from "lucide-react";
+
+const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+  Camera,
+  Lock,
+  Video,
+  AlertCircle,
+  Headphones,
+  Zap,
+  Shield,
+};
 
 export function ServicesGrid() {
   return (
@@ -15,7 +25,7 @@ export function ServicesGrid() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service) => {
-            const Icon = Icons[service.icon as keyof typeof Icons] || Icons.Shield;
+            const Icon = iconMap[service.icon] || Shield;
             return (
               <Link key={service.slug} href={`/products#${service.slug}`} className="group">
                 <div className="bg-card border border-border rounded-lg p-6 h-full group-hover:border-primary/50 transition">

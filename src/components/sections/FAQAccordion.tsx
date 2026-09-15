@@ -12,8 +12,8 @@ export function FAQAccordion() {
         </div>
 
         <div className="space-y-4">
-          {faqs.map((faq) => (
-            <details key={faq.slug} className="bg-card border border-border rounded-lg p-6 cursor-pointer group">
+          {faqs.map((faq, idx) => (
+            <details key={idx} className="bg-card border border-border rounded-lg p-6 cursor-pointer group">
               <summary className="font-semibold flex items-center justify-between">
                 {faq.question}
                 <span className="text-primary group-open:rotate-180 transition">+</span>
