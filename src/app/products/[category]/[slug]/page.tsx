@@ -1,3 +1,7 @@
+export function generateStaticParams() {
+  return [{ category: "cctv-surveillance", slug: "hd-analog-dome" }];
+}
+
 export default function ProductDetailPage() {
   return (
     <div className="container py-20">

@@ -1,30 +1,19 @@
 import fs from "fs";
 import path from "path";
-import matter from "gray-matter";
 import { BlogPost } from "@/types";
 
-const blogDir = (locale: string) => path.join(process.cwd(), "content", "blog", locale);
+const blogDir = path.join(process.cwd(), "src", "data", "blog");
 
-export async function getBlogPosts(locale: string = "en"): Promise<BlogPost[]> {
+export async function getBlogPosts(): Promise<BlogPost[]> {
   try {
-    const dir = blogDir(locale);
-    if (!fs.existsSync(dir)) return [];
+    if (!fs.existsSync(blogDir)) return [];
 
-    const files = fs.readdirSync(dir).filter((file) => file.endsWith(".md"));
+    const files = fs.readdirSync(blogDir).filter((file) => file.endsWith(".json"));
 
     const posts = files.map((file) => {
-      const filePath = path.join(dir, file);
+      const filePath = path.join(blogDir, file);
       const content = fs.readFileSync(filePath, "utf-8");
-      const { data } = matter(content);
-
-      return {
-        slug: file.replace(".md", ""),
-        title: data.title || "",
-        excerpt: data.excerpt || "",
-        date: data.date || "",
-        coverImage: data.coverImage || "",
-        content: "",
-      };
+      return JSON.parse(content) as BlogPost;
     });
 
     return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
@@ -33,29 +22,16 @@ export async function getBlogPosts(locale: string = "en"): Promise<BlogPost[]> {
   }
 }
 
-export async function getBlogPost(slug: string, locale: string = "en"): Promise<BlogPost | null> {
+export async function getBlogPost(slug: string): Promise<BlogPost | null> {
   try {
-    const dir = blogDir(locale);
-    const filePath = path.join(dir, `${slug}.md`);
+    const filePath = path.join(blogDir, `${slug}.json`);
 
     if (!fs.existsSync(filePath)) {
-      if (locale !== "en") {
-        return getBlogPost(slug, "en");
-      }
       return null;
     }
 
     const content = fs.readFileSync(filePath, "utf-8");
-    const { data, content: postContent } = matter(content);
-
-    return {
-      slug,
-      title: data.title || "",
-      excerpt: data.excerpt || "",
-      date: data.date || "",
-      coverImage: data.coverImage || "",
-      content: postContent,
-    };
+    return JSON.parse(content) as BlogPost;
   } catch {
     return null;
   }

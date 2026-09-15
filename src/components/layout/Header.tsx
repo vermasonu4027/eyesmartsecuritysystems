@@ -1,11 +1,9 @@
 "use client";
 
-import { Link } from "@/i18n/routing";
+import Link from "next/link";
 import { Phone, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Logo } from "./Logo";
-import { LocaleSwitcher } from "./LocaleSwitcher";
-import { ThemeToggle } from "./ThemeToggle";
 import { MobileNav } from "./MobileNav";
 import { business } from "@/data/business";
 import { Button } from "@/components/ui/button";
@@ -51,16 +49,12 @@ export function Header() {
               <Phone className="w-4 h-4" />
               <span className="hidden lg:inline">{business.phoneDisplay}</span>
             </a>
-            <LocaleSwitcher />
-            <ThemeToggle />
             <Link href="/contact">
               <Button size="sm">Get Free Quote</Button>
             </Link>
           </div>
 
           <div className="md:hidden flex items-center gap-2">
-            <LocaleSwitcher />
-            <ThemeToggle />
             <Sheet open={open} onOpenChange={setOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon" aria-label="Toggle menu">

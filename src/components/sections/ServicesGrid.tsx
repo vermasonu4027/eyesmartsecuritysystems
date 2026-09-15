@@ -1,4 +1,4 @@
-import { Link } from "@/i18n/routing";
+import Link from "next/link";
 import { services } from "@/data/services";
 import { Camera, Lock, Video, AlertCircle, Headphones, Zap, Shield } from "lucide-react";
 

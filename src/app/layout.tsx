@@ -1,6 +1,9 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans, Inter } from "next/font/google";
-import { getRequestConfig } from "next-intl/server";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import { FloatingActions } from "@/components/layout/FloatingActions";
+import { Toaster } from "sonner";
 import "./globals.css";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -17,6 +20,13 @@ const inter = Inter({
   display: "swap",
 });
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  themeColor: "#16a34a",
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://eyesmartsecuritysystems.com"),
   title: {
@@ -25,15 +35,6 @@ export const metadata: Metadata = {
   },
   description:
     "EYE SMART SECURITY SYSTEMS is a top-rated security system supplier and installer serving Noida, Greater Noida, and Ghaziabad since 2013. CCTV, biometric access control, alarms, video door phones, and cabling solutions.",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-  },
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#16a34a" },
-    { media: "(prefers-color-scheme: dark)", color: "#22c55e" },
-  ],
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
@@ -62,7 +63,11 @@ export default function RootLayout({
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">
-        {children}
+        <Header />
+        <main className="flex-1">{children}</main>
+        <Footer />
+        <FloatingActions />
+        <Toaster position="bottom-right" />
       </body>
     </html>
   );

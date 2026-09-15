@@ -1,14 +1,8 @@
-import { Link, usePathname } from "@/i18n/routing";
+import Link from "next/link";
 import { getBlogPosts } from "@/lib/blog";
-import { notFound } from "next/navigation";
 
-interface BlogPageProps {
-  params: Promise<{ locale: string }>;
-}
-
-export default async function BlogPage({ params }: BlogPageProps) {
-  const { locale } = await params;
-  const posts = await getBlogPosts(locale);
+export default async function BlogPage() {
+  const posts = await getBlogPosts();
 
   if (!posts.length) {
     return (
