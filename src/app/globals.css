@@ -1,0 +1,153 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --surface: #f8fafc;
+    --foreground: #0f172a;
+    --muted-foreground: #64748b;
+    --border: #e2e8f0;
+    --primary: #16a34a;
+    --primary-hover: #15803d;
+    --primary-foreground: #ffffff;
+    --accent-soft: #f0fdf4;
+    --ring: #16a34a;
+    --destructive: #dc2626;
+    --radius: 0.75rem;
+    --font-heading: var(--font-plus-jakarta-sans);
+    --font-body: var(--font-inter);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: #0a0f1a;
+      --surface: #111827;
+      --foreground: #e5e7eb;
+      --muted-foreground: #94a3b8;
+      --border: #1f2937;
+      --primary: #22c55e;
+      --primary-hover: #16a34a;
+      --primary-foreground: #052e16;
+      --accent-soft: #052e16;
+      --ring: #22c55e;
+      --destructive: #ef4444;
+    }
+  }
+
+  [data-theme="light"] {
+    --background: #ffffff;
+    --surface: #f8fafc;
+    --foreground: #0f172a;
+    --muted-foreground: #64748b;
+    --border: #e2e8f0;
+    --primary: #16a34a;
+    --primary-hover: #15803d;
+    --primary-foreground: #ffffff;
+    --accent-soft: #f0fdf4;
+    --ring: #16a34a;
+    --destructive: #dc2626;
+  }
+
+  [data-theme="dark"] {
+    --background: #0a0f1a;
+    --surface: #111827;
+    --foreground: #e5e7eb;
+    --muted-foreground: #94a3b8;
+    --border: #1f2937;
+    --primary: #22c55e;
+    --primary-hover: #16a34a;
+    --primary-foreground: #052e16;
+    --accent-soft: #052e16;
+    --ring: #22c55e;
+    --destructive: #ef4444;
+  }
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent-soft: var(--accent-soft);
+  --color-ring: var(--ring);
+  --color-destructive: var(--destructive);
+
+  --radius-base: var(--radius);
+  --radius-lg: calc(var(--radius) + 0.25rem);
+  --radius-full: 9999px;
+
+  --font-sans: var(--font-body);
+  --font-heading: var(--font-heading);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rounding-mode" 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading font-semibold tracking-tight;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  p,
+  li {
+    @apply leading-relaxed;
+  }
+
+  a {
+    @apply text-primary hover:text-primary-hover transition-colors;
+  }
+}
+
+@supports (scrollbar-gutter: stable) {
+  html {
+    scrollbar-gutter: stable;
+  }
+}
+
+@layer utilities {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .prose {
+    @apply prose-a:text-primary prose-a:no-underline hover:prose-a:underline;
+    @apply prose-headings:font-heading prose-headings:tracking-tight;
+    @apply prose-code:bg-surface prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    @apply !transition-none !animate-none;
+  }
+}

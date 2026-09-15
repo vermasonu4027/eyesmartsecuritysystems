@@ -1,0 +1,269 @@
+{
+  "common": {
+    "phone": "+91 63079 72402",
+    "email": "info@eyesmartsecuritysystems.com",
+    "address": "Pragati Marg, Block C, Sector 81, Noida, Uttar Pradesh 201305",
+    "hours": "Mon–Sat: 9:00 AM – 8:00 PM",
+    "emergency": "24/7 Emergency Service",
+    "getQuote": "Get Free Quote",
+    "requestQuote": "Request a Quote",
+    "callNow": "Call Now",
+    "whatsapp": "WhatsApp",
+    "learnMore": "Learn More",
+    "readMore": "Read More",
+    "back": "Back",
+    "home": "Home",
+    "all": "All"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "products": "Products",
+    "blog": "Blog",
+    "contact": "Contact",
+    "quote": "Get Free Quote"
+  },
+  "header": {
+    "utility": "Serving all of Delhi NCR",
+    "hours": "Mon–Sat 9AM–8PM · 24/7 Emergency"
+  },
+  "hero": {
+    "title": "Advanced CCTV & Security Systems for Delhi NCR",
+    "subtitle": "Trusted since 2013 for HD/IP camera installation, biometric access control, alarms and complete security solutions — for homes, offices and industries.",
+    "cta1": "Get a Free Quote",
+    "cta2": "Call +91 6307972402",
+    "trust1": "12+ Years Experience",
+    "trust2": "Free Site Visit",
+    "trust3": "All Delhi NCR",
+    "trust4": "24/7 Support"
+  },
+  "trustBar": {
+    "brands": "Trusted Brands",
+    "cpplus": "CP Plus",
+    "godrej": "Godrej",
+    "regional": "+ trusted regional brands",
+    "badge1": "Licensed Installer",
+    "badge2": "Warranty-Backed",
+    "badge3": "On-Site Service"
+  },
+  "services": {
+    "title": "Our Security Solutions",
+    "cctv": "CCTV Surveillance",
+    "cctvDesc": "Professional HD and IP camera systems for complete property monitoring",
+    "biometric": "Biometric & Access Control",
+    "biometricDesc": "Fingerprint and face recognition systems for secure access management",
+    "videoDoor": "Video Door Phones",
+    "videoDoorDesc": "Video intercom systems for safe visitor identification",
+    "alarm": "Intruder Alarms",
+    "alarmDesc": "Motion detection and burglar alarm systems for intrusion prevention",
+    "intercom": "Intercom & EPABX",
+    "intercomDesc": "Internal communication systems for offices and apartments",
+    "cabling": "Cabling & Networking",
+    "cablingDesc": "Professional structured cabling and electrical wiring solutions"
+  },
+  "whyChoose": {
+    "title": "Why Choose Eye Smart?",
+    "point1Title": "12+ Years of Excellence",
+    "point1Desc": "Trusted security partner since 2013 with thousands of satisfied customers",
+    "point2Title": "End-to-End Solutions",
+    "point2Desc": "From consultation to installation to ongoing support, we handle everything",
+    "point3Title": "Expert Technicians",
+    "point3Desc": "Certified and trained professionals with years of field experience",
+    "point4Title": "Post-Install Support",
+    "point4Desc": "24/7 emergency support and comprehensive maintenance services available",
+    "point5Title": "Transparent Pricing",
+    "point5Desc": "No hidden charges, detailed quotes, and honest recommendations",
+    "point6Title": "NCR-Wide Coverage",
+    "point6Desc": "Serving Delhi, Noida, Greater Noida, Ghaziabad, Gurgaon, Faridabad"
+  },
+  "process": {
+    "title": "Our 4-Step Security Process",
+    "step1Title": "Free Consultation",
+    "step1Desc": "Talk to our experts about your security needs and concerns",
+    "step2Title": "Site Survey & Quote",
+    "step2Desc": "Professional assessment and customized quote with no obligation",
+    "step3Title": "Professional Installation",
+    "step3Desc": "Expert installation with minimal disruption to your routine",
+    "step4Title": "Handover & Support",
+    "step4Desc": "Training, documentation, and ongoing 24/7 support"
+  },
+  "testimonials": {
+    "title": "What Our Customers Say",
+    "verified": "Verified Customers"
+  },
+  "coverage": {
+    "title": "Serving All of Delhi NCR",
+    "subtitle": "Professional security solutions across 6 key cities",
+    "delhi": "Delhi",
+    "noida": "Noida",
+    "greaterNoida": "Greater Noida",
+    "ghaziabad": "Ghaziabad",
+    "gurgaon": "Gurgaon",
+    "faridabad": "Faridabad"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "question1": "Do you offer free site visits and quotes?",
+    "question2": "Which brands do you work with?",
+    "question3": "Do you provide maintenance and after-sales support?",
+    "question4": "How long does the installation process take?",
+    "question5": "Do you serve my area in Delhi NCR?",
+    "question6": "How do I get a security quote for my property?"
+  },
+  "ctaBanner": {
+    "title": "Ready to Secure Your Property?",
+    "subtitle": "Get expert advice and a free quote today",
+    "cta": "Get a Free Quote"
+  },
+  "about": {
+    "hero": "Delhi NCR's Trusted Security Partner Since 2013",
+    "businessDesc": "EYE SMART SECURITY SYSTEMS is a top-rated security system supplier and installer serving Noida, Greater Noida, and Ghaziabad since 2013. We offer end-to-end security solutions for home, office, and industrial properties, including HD & IP CCTV surveillance systems, biometric access control & time attendance, video door phones & EPABX intercoms, burglar intruder alarms & smart home security, and electrical wiring & network cabling.",
+    "stats": {
+      "years": "12+ Years Experience",
+      "installations": "2,000+ Installations",
+      "cities": "6 Cities Covered",
+      "support": "24/7 Support"
+    },
+    "whoWeServe": "Who We Serve",
+    "homes": "Homes & Apartments",
+    "retail": "Shops & Retail",
+    "offices": "Offices",
+    "factories": "Factories & Warehouses",
+    "schools": "Schools & Hospitals",
+    "societies": "Societies & RWAs",
+    "values": "Our Approach",
+    "value1Title": "Honest Advice",
+    "value1Desc": "We recommend solutions based on your actual needs, not budget alone",
+    "value2Title": "Quality Hardware",
+    "value2Desc": "Premium products from trusted brands with proven reliability",
+    "value3Title": "Reliable Support",
+    "value3Desc": "Expert technicians and 24/7 emergency service always available"
+  },
+  "products": {
+    "hero": "Our Security Solutions",
+    "intro": "Comprehensive product range to protect homes, offices, and industries",
+    "category": "Category",
+    "features": "Features",
+    "specifications": "Specifications",
+    "overview": "Overview",
+    "support": "Installation & Support",
+    "relatedProducts": "Related Products",
+    "noRelated": "No related products found"
+  },
+  "blog": {
+    "hero": "Insights & Guides from Our Security Experts",
+    "subtitle": "Learn about the latest security trends and best practices",
+    "readTime": "min read",
+    "published": "Published",
+    "updated": "Updated",
+    "toc": "Table of Contents",
+    "share": "Share this article",
+    "shareWhatsapp": "Share on WhatsApp",
+    "copyLink": "Copy link",
+    "copied": "Link copied to clipboard!",
+    "back": "Back to all articles",
+    "noArticles": "No articles found",
+    "hi": {
+      "fallback": "Hindi articles coming soon. Showing English content."
+    }
+  },
+  "contact": {
+    "hero": "Get a Free Quote",
+    "subtitle": "Talk to our security experts — we respond within 24 hours.",
+    "info": "Contact Information",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "hours": "Working Hours",
+    "directions": "Get Directions",
+    "form": "Quote Request Form",
+    "formName": "Full Name",
+    "formPhone": "Phone Number",
+    "formEmail": "Email Address",
+    "formService": "Service Type",
+    "formProperty": "Property Type",
+    "formMessage": "Message (Optional)",
+    "formSubmit": "Request Quote",
+    "formSubmitting": "Submitting...",
+    "formSuccess": "Quote request submitted successfully! We'll contact you within 24 hours.",
+    "formError": "Failed to submit. Please try again or call us directly.",
+    "validation": {
+      "nameRequired": "Name is required",
+      "phoneRequired": "Phone number is required",
+      "phoneInvalid": "Please enter a valid 10-digit phone number",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Please enter a valid email",
+      "serviceRequired": "Please select a service type",
+      "propertyRequired": "Please select a property type"
+    },
+    "services": {
+      "cctv": "CCTV Surveillance",
+      "biometric": "Biometric & Access Control",
+      "videoDoor": "Video Door Phone",
+      "alarm": "Intruder Alarm",
+      "intercom": "Intercom/EPABX",
+      "fire": "Fire Safety",
+      "cabling": "Cabling & Networking",
+      "other": "Other"
+    },
+    "properties": {
+      "home": "Home/Apartment",
+      "retail": "Shop/Retail",
+      "office": "Office",
+      "factory": "Factory/Warehouse",
+      "school": "School/Hospital",
+      "society": "Society/RWA",
+      "other": "Other"
+    }
+  },
+  "footer": {
+    "brand": "Your trusted security partner since 2013",
+    "quickLinks": {
+      "title": "Quick Links",
+      "home": "Home",
+      "about": "About",
+      "products": "Products",
+      "blog": "Blog",
+      "contact": "Contact"
+    },
+    "services": {
+      "title": "Services",
+      "cctv": "CCTV Systems",
+      "biometric": "Access Control",
+      "videoDoor": "Video Door Phones",
+      "alarm": "Alarm Systems",
+      "intercom": "Intercom Systems",
+      "cabling": "Cabling Solutions"
+    },
+    "contact": {
+      "title": "Contact Us",
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address",
+      "hours": "Hours"
+    },
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    },
+    "copyright": "© 2026 Eye Smart Security Systems. All rights reserved."
+  },
+  "legal": {
+    "lastUpdated": "Last Updated",
+    "privacyTitle": "Privacy Policy",
+    "termsTitle": "Terms of Service",
+    "effectiveDate": "Effective Date"
+  },
+  "notFound": {
+    "title": "Looks like this page went off-camera.",
+    "subtitle": "The page you're looking for doesn't exist.",
+    "home": "Back to Home",
+    "products": "Browse Products",
+    "contact": "Contact Us"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  }
+}
