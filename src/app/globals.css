@@ -11,7 +11,9 @@
     --primary: #16a34a;
     --primary-hover: #15803d;
     --primary-foreground: #ffffff;
-    --accent-soft: #f0fdf4;
+    --accent: #f59e0b;
+    --accent-foreground: #ffffff;
+    --accent-soft: #fef3c7;
     --ring: #16a34a;
     --destructive: #dc2626;
     --radius: 0.75rem;
@@ -29,6 +31,8 @@
   --color-primary: var(--primary);
   --color-primary-hover: var(--primary-hover);
   --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
   --color-accent-soft: var(--accent-soft);
   --color-ring: var(--ring);
   --color-destructive: var(--destructive);

@@ -14,9 +14,9 @@ export function Header() {
 
   return (
     <>
-      <div className="hidden md:block bg-primary/5 border-b border-border">
-        <div className="container py-2 text-sm text-center text-muted-foreground">
-          Serving all of Delhi NCR · Mon–Sat 9AM–8PM · 24/7 Emergency
+      <div className="hidden md:block bg-black border-b border-border">
+        <div className="container py-2 text-sm text-center text-white">
+          Serving all of Delhi NCR · Mon-Sat 9AM-8PM
         </div>
       </div>
 

@@ -1,4 +1,7 @@
-import { Check } from "lucide-react";
+"use client";
+
+import { motion } from "framer-motion";
+import { fadeInUpVariant, fadeInUpContainer } from "@/lib/motion";
 
 export function Process() {
   const steps = [
@@ -25,18 +28,24 @@ export function Process() {
   ];
 
   return (
-    <section className="py-20 bg-surface">
+    <motion.section
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={fadeInUpContainer}
+      className="py-20 bg-surface"
+    >
       <div className="container">
-        <div className="text-center mb-12">
+        <motion.div className="text-center mb-12" variants={fadeInUpVariant}>
           <h2 className="text-4xl font-bold mb-4">How We Work</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Simple 4-step process to secure your property
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {steps.map((step, idx) => (
-            <div key={step.number} className="relative">
+            <motion.div key={step.number} variants={fadeInUpVariant} className="relative">
               <div className="bg-card border border-border rounded-lg p-6">
                 <div className="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center mb-4">
                   {step.number}
@@ -49,10 +58,10 @@ export function Process() {
                   →
                 </div>
               )}
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
