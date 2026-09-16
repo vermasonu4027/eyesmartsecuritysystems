@@ -1,16 +1,27 @@
 "use client";
 
 import Link from "next/link";
-import { Phone, Menu, X } from "lucide-react";
-import { useState } from "react";
+import { Phone } from "lucide-react";
+import { useState, useEffect } from "react";
 import { Logo } from "./Logo";
 import { MobileNav } from "./MobileNav";
+import { AnimatedHamburger } from "./AnimatedHamburger";
 import { business } from "@/data/business";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export function Header() {
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [open]);
 
   return (
     <>
@@ -54,20 +65,20 @@ export function Header() {
             </Link>
           </div>
 
-          <div className="md:hidden flex items-center gap-2">
-            <Sheet open={open} onOpenChange={setOpen}>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" aria-label="Toggle menu">
-                  {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="right">
-                <MobileNav onClose={() => setOpen(false)} />
-              </SheetContent>
-            </Sheet>
+          <div className="md:hidden">
+            <button
+              onClick={() => setOpen(!open)}
+              className="p-2 hover:bg-accent/10 rounded-lg transition"
+              aria-label="Toggle menu"
+              aria-expanded={open}
+            >
+              <AnimatedHamburger isOpen={open} />
+            </button>
           </div>
         </div>
       </header>
+
+      <MobileNav isOpen={open} onClose={() => setOpen(false)} />
     </>
   );
 }
