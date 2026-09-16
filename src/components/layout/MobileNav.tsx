@@ -41,11 +41,14 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
     open: { opacity: 1, y: 0, transition: { duration: 0.3 } },
   };
 
+  if (!isOpen) return null;
+
   return (
     <motion.div
       initial="closed"
-      animate={isOpen ? "open" : "closed"}
+      animate="open"
       variants={containerVariants}
+      exit="closed"
       className="fixed inset-0 bg-background/95 backdrop-blur-sm z-50 md:hidden"
       onClick={(e) => {
         if (e.target === e.currentTarget) onClose?.();

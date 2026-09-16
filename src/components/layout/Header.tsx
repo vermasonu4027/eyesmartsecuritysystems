@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Phone } from "lucide-react";
+import { AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Logo } from "./Logo";
 import { MobileNav } from "./MobileNav";
@@ -31,7 +32,7 @@ export function Header() {
         </div>
       </div>
 
-      <header className="sticky top-0 z-40 w-full backdrop-blur-md bg-background/80 border-b border-border">
+      <header className="sticky top-0 z-40 w-full backdrop-blur-md bg-background/80 border-b border-border md:z-40">
         <div className="container py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
             <Logo />
@@ -65,12 +66,13 @@ export function Header() {
             </Link>
           </div>
 
-          <div className="md:hidden">
+          <div className="md:hidden relative">
             <button
               onClick={() => setOpen(!open)}
-              className="p-2 hover:bg-accent/10 rounded-lg transition"
+              className="p-2 hover:bg-accent/10 active:bg-accent/20 rounded-lg transition-colors duration-200 relative z-50"
               aria-label="Toggle menu"
               aria-expanded={open}
+              type="button"
             >
               <AnimatedHamburger isOpen={open} />
             </button>
@@ -78,7 +80,9 @@ export function Header() {
         </div>
       </header>
 
-      <MobileNav isOpen={open} onClose={() => setOpen(false)} />
+      <AnimatePresence>
+        <MobileNav isOpen={open} onClose={() => setOpen(false)} />
+      </AnimatePresence>
     </>
   );
 }
