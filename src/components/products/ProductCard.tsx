@@ -1,1 +1,33 @@
-export function ProductCard() { return <div>Component</div>; }
+import Link from "next/link";
+import type { Product } from "@/types";
+
+interface ProductCardProps {
+  product: Product;
+  categorySlug: string;
+}
+
+export function ProductCard({ product, categorySlug }: ProductCardProps) {
+  return (
+    <Link
+      href={`/products/${categorySlug}/${product.slug}`}
+      className="block group"
+    >
+      <div className="bg-card border border-border rounded-lg p-6 h-full group-hover:border-primary/50 transition">
+        {product.brand && (
+          <div className="text-xs font-medium text-primary mb-1">
+            {product.brand}
+          </div>
+        )}
+        <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition">
+          {product.name}
+        </h3>
+        <p className="text-sm text-muted-foreground mb-4">
+          {product.shortDescription}
+        </p>
+        <div className="text-xs text-primary font-medium group-hover:translate-x-1 transition">
+          View Details →
+        </div>
+      </div>
+    </Link>
+  );
+}
