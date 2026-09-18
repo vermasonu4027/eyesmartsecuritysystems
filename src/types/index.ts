@@ -37,12 +37,19 @@ export interface Service {
   icon: string;
 }
 
+export interface ProductSpecification {
+  label: string;
+  value: string;
+}
+
 export interface Product {
   slug: string;
+  sku: string;
   name: string;
+  brand: string;
   shortDescription: string;
   features: string[];
-  specs?: Record<string, string>;
+  specifications?: ProductSpecification[];
   image?: string;
 }
 
