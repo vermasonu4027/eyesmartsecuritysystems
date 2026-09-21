@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { fadeInUpVariant, fadeInUpContainer } from "@/lib/motion";
+import { DragTimeline } from "./DragTimeline";
 
 export function Process() {
   const steps = [
@@ -43,24 +44,9 @@ export function Process() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-          {steps.map((step, idx) => (
-            <motion.div key={step.number} variants={fadeInUpVariant} className="relative">
-              <div className="bg-card border border-border rounded-lg p-6">
-                <div className="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center mb-4">
-                  {step.number}
-                </div>
-                <h3 className="font-semibold mb-2">{step.title}</h3>
-                <p className="text-sm text-muted-foreground">{step.description}</p>
-              </div>
-              {idx < steps.length - 1 && (
-                <div className="hidden md:block absolute top-1/2 -right-3 transform -translate-y-1/2 text-primary">
-                  →
-                </div>
-              )}
-            </motion.div>
-          ))}
-        </div>
+        <motion.div variants={fadeInUpVariant}>
+          <DragTimeline steps={steps} />
+        </motion.div>
       </div>
     </motion.section>
   );
