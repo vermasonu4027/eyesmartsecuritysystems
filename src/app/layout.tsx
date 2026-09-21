@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingActions } from "@/components/layout/FloatingActions";
+import { MotionProvider } from "@/components/providers/MotionProvider";
 import { Toaster } from "sonner";
 import "./globals.css";
 
@@ -58,16 +59,15 @@ export default function RootLayout({
       className={`${plusJakartaSans.variable} ${inter.variable} h-full antialiased`}
       suppressHydrationWarning
     >
-      <head>
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-      </head>
+      <head></head>
       <body className="min-h-full flex flex-col bg-background text-foreground">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
-        <FloatingActions />
-        <Toaster position="bottom-right" />
+        <MotionProvider>
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+          <FloatingActions />
+          <Toaster position="bottom-right" />
+        </MotionProvider>
       </body>
     </html>
   );

@@ -8,6 +8,7 @@ import { Logo } from "./Logo";
 import { MobileNav } from "./MobileNav";
 import { AnimatedHamburger } from "./AnimatedHamburger";
 import { business } from "@/data/business";
+import { mainNav } from "@/data/navigation";
 import { Button } from "@/components/ui/button";
 
 export function Header() {
@@ -39,21 +40,11 @@ export function Header() {
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">
-            <Link href="/" className="text-sm font-medium hover:text-primary transition">
-              Home
-            </Link>
-            <Link href="/about" className="text-sm font-medium hover:text-primary transition">
-              About
-            </Link>
-            <Link href="/products" className="text-sm font-medium hover:text-primary transition">
-              Products
-            </Link>
-            <Link href="/blog" className="text-sm font-medium hover:text-primary transition">
-              Blog
-            </Link>
-            <Link href="/contact" className="text-sm font-medium hover:text-primary transition">
-              Contact
-            </Link>
+            {mainNav.map((item) => (
+              <Link key={item.href} href={item.href} className="text-sm font-medium hover:text-primary transition">
+                {item.label}
+              </Link>
+            ))}
           </nav>
 
           <div className="hidden md:flex items-center gap-4">
@@ -80,8 +71,8 @@ export function Header() {
         </div>
       </header>
 
-      <AnimatePresence>
-        <MobileNav isOpen={open} onClose={() => setOpen(false)} />
+      <AnimatePresence mode="wait">
+        {open && <MobileNav isOpen={open} onClose={() => setOpen(false)} />}
       </AnimatePresence>
     </>
   );
