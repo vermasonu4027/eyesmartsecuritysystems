@@ -1,4 +1,7 @@
+import { Metadata } from "next";
+import Image from "next/image";
 import { getBlogPost, getBlogPosts } from "@/lib/blog";
+import { buildMetadata } from "@/lib/seo";
 import { notFound } from "next/navigation";
 
 export async function generateStaticParams() {
@@ -13,6 +16,17 @@ interface BlogPostPageProps {
   params: Promise<{ slug: string }>;
 }
 
+export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const post = await getBlogPost(slug);
+
+  if (!post) {
+    return {};
+  }
+
+  return buildMetadata(post.title, post.excerpt);
+}
+
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params;
   const post = await getBlogPost(slug);
@@ -25,11 +39,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     <article className="container py-20">
       <div className="max-w-3xl mx-auto">
         {post.coverImage && (
-          <div className="aspect-video mb-8 rounded-lg overflow-hidden bg-gradient-to-br from-primary/10 to-primary/5">
-            <img
+          <div className="relative w-full aspect-video mb-8 rounded-lg overflow-hidden bg-gradient-to-br from-primary/10 to-primary/5">
+            <Image
               src={post.coverImage}
               alt={post.title}
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
             />
           </div>
         )}
