@@ -1,5 +1,8 @@
+import { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { productCategories } from "@/data/products";
+import { buildMetadata } from "@/lib/seo";
 
 export function generateStaticParams() {
   return productCategories.flatMap((category) =>
@@ -12,6 +15,18 @@ export function generateStaticParams() {
 
 interface ProductDetailPageProps {
   params: Promise<{ category: string; slug: string }>;
+}
+
+export async function generateMetadata({ params }: ProductDetailPageProps): Promise<Metadata> {
+  const { category, slug } = await params;
+  const productCategory = productCategories.find((c) => c.slug === category);
+  const product = productCategory?.products.find((p) => p.slug === slug);
+
+  if (!product) {
+    return {};
+  }
+
+  return buildMetadata(product.name, product.shortDescription);
 }
 
 export default async function ProductDetailPage({
@@ -28,6 +43,17 @@ export default async function ProductDetailPage({
   return (
     <div className="container py-20">
       <div className="max-w-3xl mx-auto">
+        {product.image && (
+          <div className="relative w-full aspect-video mb-8 rounded-lg overflow-hidden bg-muted">
+            <Image
+              src={product.image}
+              alt={product.name}
+              fill
+              className="object-cover"
+            />
+          </div>
+        )}
+
         <div className="mb-8">
           {product.brand && (
             <div className="text-sm font-medium text-primary mb-2">

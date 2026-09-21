@@ -9,26 +9,32 @@ import { Phone } from "lucide-react";
 export function Hero() {
   const [phone, setPhone] = useState("");
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
+    setLoading(true);
 
-    if (!phone.trim()) {
-      setError("Please enter your phone number");
-      return;
+    try {
+      if (!phone.trim()) {
+        setError("Please enter your phone number");
+        return;
+      }
+
+      if (!isValidIndianMobile(phone)) {
+        setError("Please enter a valid 10-digit Indian mobile number");
+        return;
+      }
+
+      const normalized = normalizeIndianMobile(phone);
+      const message = `Hi, please call me back at +91${normalized}`;
+      const waLink = `https://wa.me/${business.whatsapp}?text=${encodeURIComponent(message)}`;
+      window.open(waLink, "_blank");
+      setPhone("");
+    } finally {
+      setLoading(false);
     }
-
-    if (!isValidIndianMobile(phone)) {
-      setError("Please enter a valid 10-digit Indian mobile number");
-      return;
-    }
-
-    const normalized = normalizeIndianMobile(phone);
-    const message = `Hi, please call me back at +91${normalized}`;
-    const waLink = `https://wa.me/${business.whatsapp}?text=${encodeURIComponent(message)}`;
-    window.open(waLink, "_blank");
-    setPhone("");
   };
 
   return (
@@ -42,20 +48,27 @@ export function Hero() {
         </p>
 
         <form onSubmit={handleSubmit} className="flex flex-col items-center gap-4 mb-8">
-          <div className="flex flex-col sm:flex-row gap-3 w-full max-w-md justify-center">
-            <input
-              type="tel"
-              placeholder="Enter your phone number"
-              value={phone}
-              onChange={(e) => {
-                setPhone(e.target.value);
-                setError("");
-              }}
-              className="flex-1 px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition"
-            />
-            <Button type="submit" size="lg" className="bg-primary hover:bg-primary-hover text-white">
-              Get Free Quote
-            </Button>
+          <div className="flex flex-col gap-2 w-full max-w-md justify-center">
+            <label htmlFor="phone-input" className="text-sm font-medium text-foreground">
+              Phone Number
+            </label>
+            <div className="flex flex-col sm:flex-row gap-3 w-full">
+              <input
+                id="phone-input"
+                type="tel"
+                placeholder="Enter your phone number"
+                value={phone}
+                onChange={(e) => {
+                  setPhone(e.target.value);
+                  setError("");
+                }}
+                className="flex-1 px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition"
+                disabled={loading}
+              />
+              <Button type="submit" size="lg" loading={loading} className="bg-primary hover:bg-primary-hover text-white">
+                Get Free Quote
+              </Button>
+            </div>
           </div>
           {error && <p className="text-sm text-destructive">{error}</p>}
         </form>

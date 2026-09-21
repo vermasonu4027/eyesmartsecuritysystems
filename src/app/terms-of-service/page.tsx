@@ -1,3 +1,11 @@
+import { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = buildMetadata(
+  "Terms of Service",
+  "Review our terms of service to understand the rules and conditions governing your use of Eye Smart Security Systems' website and services."
+);
+
 export default function TermsPage() {
   return (
     <div className="container py-20 max-w-2xl">

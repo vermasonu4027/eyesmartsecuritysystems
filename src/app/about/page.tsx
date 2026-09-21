@@ -1,5 +1,12 @@
+import { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 import { AnimatedStats } from "@/components/sections/AnimatedStats";
 import { TrustStrip } from "@/components/sections/TrustStrip";
+
+export const metadata: Metadata = buildMetadata(
+  "About Us",
+  "Learn about Eye Smart Security Systems — Delhi NCR's trusted security partner since 2013. We've installed systems in over 1,000 homes and businesses."
+);
 
 export default function AboutPage() {
   return (

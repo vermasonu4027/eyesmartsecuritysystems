@@ -1,36 +1,36 @@
 export const mainNav = [
   {
-    label: "nav.home",
+    label: "Home",
     href: "/",
   },
   {
-    label: "nav.about",
+    label: "About",
     href: "/about",
   },
   {
-    label: "nav.products",
+    label: "Products",
     href: "/products",
   },
   {
-    label: "nav.blog",
+    label: "Blog",
     href: "/blog",
   },
   {
-    label: "nav.contact",
+    label: "Contact",
     href: "/contact",
   },
 ];
 
 export const footerNav = {
   quickLinks: [
-    { label: "footer.quickLinks.home", href: "/" },
-    { label: "footer.quickLinks.about", href: "/about" },
-    { label: "footer.quickLinks.products", href: "/products" },
-    { label: "footer.quickLinks.blog", href: "/blog" },
-    { label: "footer.quickLinks.contact", href: "/contact" },
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
+    { label: "Products", href: "/products" },
+    { label: "Blog", href: "/blog" },
+    { label: "Contact", href: "/contact" },
   ],
   legal: [
-    { label: "footer.legal.privacy", href: "/privacy-policy" },
-    { label: "footer.legal.terms", href: "/terms-of-service" },
+    { label: "Privacy Policy", href: "/privacy-policy" },
+    { label: "Terms of Service", href: "/terms-of-service" },
   ],
 };

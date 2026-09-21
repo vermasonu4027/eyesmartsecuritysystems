@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { business } from "@/data/business";
+import { footerNav } from "@/data/navigation";
 
 export function Footer() {
   return (
@@ -15,10 +16,9 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-3 text-sm">Quick Links</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/" className="text-muted-foreground hover:text-primary transition">Home</Link></li>
-              <li><Link href="/about" className="text-muted-foreground hover:text-primary transition">About</Link></li>
-              <li><Link href="/products" className="text-muted-foreground hover:text-primary transition">Products</Link></li>
-              <li><Link href="/blog" className="text-muted-foreground hover:text-primary transition">Blog</Link></li>
+              {footerNav.quickLinks.map((item) => (
+                <li key={item.href}><Link href={item.href} className="text-muted-foreground hover:text-primary transition">{item.label}</Link></li>
+              ))}
             </ul>
           </div>
           <div>
@@ -42,8 +42,9 @@ export function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
             <p>© 2026 Eye Smart Security Systems. All rights reserved.</p>
             <div className="flex gap-6">
-              <Link href="/privacy-policy" className="hover:text-primary transition">Privacy Policy</Link>
-              <Link href="/terms-of-service" className="hover:text-primary transition">Terms of Service</Link>
+              {footerNav.legal.map((item) => (
+                <Link key={item.href} href={item.href} className="hover:text-primary transition">{item.label}</Link>
+              ))}
             </div>
           </div>
         </div>

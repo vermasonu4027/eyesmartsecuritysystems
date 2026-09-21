@@ -1,4 +1,12 @@
+import { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
+
 export const dynamic = 'force-dynamic';
+
+export const metadata: Metadata = buildMetadata(
+  "Privacy Policy",
+  "Read our privacy policy to understand how Eye Smart Security Systems collects, uses, and protects your personal information."
+);
 
 export default function PrivacyPage() {
   return (

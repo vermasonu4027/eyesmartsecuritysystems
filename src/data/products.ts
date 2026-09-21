@@ -11,8 +11,9 @@ export const productCategories: ProductCategory[] = [
       {
         slug: "cp-plus-cp-urc-tc24pl3c-l-v2",
         sku: "CP-URC-TC24PL3C-L-V2",
-        name: "CP PLUS CP-URC-TC24PL3C-L-V2 2.4MP Dual Light Bullet Camera - 30Mtr.",
+        name: "CP PLUS 2.4MP Dual Light Bullet Camera Microphone full HD",
         brand: "CP PLUS",
+        image: "/images/cppluscctv/CP-URC-TC24PL3C-L-V2.png",
         shortDescription:
           "2.4MP Dual Light bullet CCTV camera with 30M IR, 20M warm light, built-in mic, IP67 weatherproofing, and 4-in-1 HD output for 24/7 outdoor surveillance.",
         features: [
@@ -95,8 +96,9 @@ export const productCategories: ProductCategory[] = [
       {
         slug: "cp-plus-cp-urc-tc51pl3c",
         sku: "CP-URC-TC51PL3C",
-        name: "CP PLUS CP-URC-TC51PL3C 5MP IR Bullet Camera - 30Mtr.",
+        name: "CP PLUS 5MP IR Bullet Camera 2k",
         brand: "CP PLUS",
+        image: "/images/cppluscctv/CP-URC-TC51PL3C.png",
         shortDescription:
           "5MP HD bullet CCTV camera with 30M Smart IR night vision, built-in microphone, IP67 rating, and 4-in-1 HD-CVI/TVI/AHD/CVBS output for professional outdoor security.",
         features: [
@@ -201,8 +203,9 @@ export const productCategories: ProductCategory[] = [
       {
         slug: "cp-plus-cp-urc-tc24pl3",
         sku: "CP-URC-TC24PL3",
-        name: "CP PLUS CP-URC-TC24PL3 2.4MP IR Bullet Camera - 30Mtr.",
+        name: "CP PLUS 2.4MP IR Bullet Camera + Microphone fullHD",
         brand: "CP PLUS",
+        image: "/images/cppluscctv/CP-URC-TC24PL3.png",
         shortDescription:
           "2.4MP HD bullet CCTV camera with 30M Smart IR, IP67 weatherproof housing, and switchable CVI/TVI/AHD/CVBS output for reliable outdoor monitoring.",
         features: [
@@ -307,8 +310,9 @@ export const productCategories: ProductCategory[] = [
       {
         slug: "cp-plus-cp-urc-dc51pl3c",
         sku: "CP-URC-DC51PL3C",
-        name: "CP PLUS CP-URC-DC51PL3C 5MP IR Dome Camera - 30Mtr.",
+        name: "CP PLUS 5MP IR Dome Camera + Microphone 2k",
         brand: "CP PLUS",
+        image: "/images/cppluscctv/CP-URC-DC51PL3C.png",
         shortDescription:
           "5MP HD dome CCTV camera with 30M Smart IR night vision, built-in microphone, and 4-in-1 HD output — ideal for indoor and outdoor surveillance.",
         features: [
@@ -409,8 +413,9 @@ export const productCategories: ProductCategory[] = [
       {
         slug: "cp-plus-cp-urc-dc24pl3c-l-v2",
         sku: "CP-URC-DC24PL3C-L-V2",
-        name: "CP PLUS CP-URC-DC24PL3C-L-V2 2.4MP Dual Light Dome Camera - 30Mtr.",
+        name: "CP PLUS 2.4MP Dual Light Dome Camera + Microphone",
         brand: "CP PLUS",
+        image: "/images/cppluscctv/CP-URC-DC24PL3C-L-V2.png",
         shortDescription:
           "2.4MP Dual Light dome CCTV camera with 30M IR + 20M warm light, active deterrence, built-in mic, and 4-in-1 HD output for full-color night surveillance.",
         features: [

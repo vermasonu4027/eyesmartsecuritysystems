@@ -1,10 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { business } from "@/data/business";
+import { mainNav, footerNav } from "@/data/navigation";
 
 interface MobileNavProps {
   isOpen: boolean;
@@ -12,13 +14,8 @@ interface MobileNavProps {
 }
 
 export function MobileNav({ isOpen, onClose }: MobileNavProps) {
-  const links = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/products", label: "Products" },
-    { href: "/blog", label: "Blog" },
-    { href: "/contact", label: "Contact" },
-  ];
+  const navRef = useRef<HTMLDivElement>(null);
+  const firstLinkRef = useRef<HTMLAnchorElement>(null);
 
   const containerVariants = {
     closed: {
@@ -34,6 +31,11 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
         delayChildren: 0.1,
       },
     },
+    exit: {
+      opacity: 0,
+      y: -20,
+      transition: { duration: 0.2 },
+    },
   };
 
   const itemVariants = {
@@ -41,15 +43,35 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
     open: { opacity: 1, y: 0, transition: { duration: 0.3 } },
   };
 
-  if (!isOpen) return null;
+  useEffect(() => {
+    if (isOpen) {
+      setTimeout(() => {
+        firstLinkRef.current?.focus();
+      }, 0);
+      document.addEventListener("keydown", handleKeyDown);
+    }
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isOpen]);
+
+  const handleKeyDown = (e: KeyboardEvent) => {
+    if (e.key === "Escape" && isOpen) {
+      onClose?.();
+    }
+  };
 
   return (
     <motion.div
+      ref={navRef}
       initial="closed"
-      animate="open"
+      animate={isOpen ? "open" : "closed"}
       variants={containerVariants}
-      exit="closed"
+      exit="exit"
       className="fixed inset-0 bg-background/95 backdrop-blur-sm z-50 md:hidden"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden={!isOpen}
       onClick={(e) => {
         if (e.target === e.currentTarget) onClose?.();
       }}
@@ -57,9 +79,10 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
       <div className="container h-full flex flex-col">
         <div className="flex-1 flex flex-col justify-center gap-12">
           <motion.nav className="flex flex-col gap-2" variants={containerVariants}>
-            {links.map((link) => (
+            {mainNav.map((link, idx) => (
               <motion.div key={link.href} variants={itemVariants}>
                 <Link
+                  ref={idx === 0 ? firstLinkRef : null}
                   href={link.href}
                   onClick={onClose}
                   className="text-3xl md:text-4xl font-bold text-foreground hover:text-primary transition duration-300 block py-3"

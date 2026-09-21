@@ -1,5 +1,13 @@
+import { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { getBlogPosts } from "@/lib/blog";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = buildMetadata(
+  "Blog",
+  "Read insights and guides from our security experts about CCTV systems, security best practices, and industry trends."
+);
 
 export default async function BlogPage() {
   const posts = await getBlogPosts();
@@ -29,11 +37,12 @@ export default async function BlogPage() {
           >
             <article className="flex flex-col h-full bg-card border border-border rounded-lg overflow-hidden group-hover:border-primary/50 transition">
               {post.coverImage && (
-                <div className="aspect-video bg-gradient-to-br from-primary/10 to-primary/5 overflow-hidden">
-                  <img
+                <div className="relative w-full aspect-video bg-gradient-to-br from-primary/10 to-primary/5 overflow-hidden">
+                  <Image
                     src={post.coverImage}
                     alt={post.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+                    fill
+                    className="object-cover group-hover:scale-105 transition duration-300"
                   />
                 </div>
               )}
