@@ -104,6 +104,61 @@
   }
 }
 
+.hero-mesh {
+  background: #020617;
+  overflow: hidden;
+}
+
+.hero-mesh::before {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  background:
+    radial-gradient(60% 50% at 20% 20%, rgb(22 163 74 / 0.45), transparent 70%),
+    radial-gradient(50% 45% at 80% 30%, rgb(56 189 248 / 0.22), transparent 70%),
+    radial-gradient(55% 50% at 50% 90%, rgb(245 158 11 / 0.16), transparent 70%);
+  animation: hero-mesh-drift 28s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@keyframes hero-mesh-drift {
+  from {
+    transform: translate3d(-4%, -3%, 0) scale(1);
+  }
+  to {
+    transform: translate3d(4%, 3%, 0) scale(1.08);
+  }
+}
+
+.camera-grid {
+  background-image:
+    linear-gradient(rgb(255 255 255 / 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(255 255 255 / 0.05) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+}
+
+.glass-card {
+  background: rgb(255 255 255 / 0.1);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  backdrop-filter: blur(12px) saturate(140%);
+  border: 1px solid rgb(255 255 255 / 0.18);
+  box-shadow:
+    0 8px 32px rgb(0 0 0 / 0.35),
+    inset 0 1px 0 rgb(255 255 255 / 0.15);
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .glass-card {
+    background: rgb(15 23 42 / 0.85);
+  }
+}
+
+.glass-chip {
+  background: rgb(255 255 255 / 0.08);
+  border: 1px solid rgb(255 255 255 / 0.14);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
