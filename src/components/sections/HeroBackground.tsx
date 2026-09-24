@@ -3,10 +3,9 @@
 import { useState, useSyncExternalStore } from "react";
 import { motion, type MotionValue } from "framer-motion";
 
-type HeroVideo = { webm: string; mp4: string };
+type HeroVideo = { webm: string; mp4?: string };
 
-// Set to { webm: "/videos/hero-loop.webm", mp4: "/videos/hero-loop.mp4" } once the files are in public/videos.
-const HERO_VIDEO = null as HeroVideo | null;
+const HERO_VIDEO = { webm: "/videos/eye-smart-security-systems-with-watermark.webm" } as HeroVideo | null;
 
 interface HeroBackgroundProps {
   scrollY: MotionValue<string>;
@@ -49,7 +48,7 @@ export function HeroBackground({ scrollY, x, y }: HeroBackgroundProps) {
               onCanPlay={() => setVideoReady(true)}
             >
               <source src={HERO_VIDEO.webm} type="video/webm" />
-              <source src={HERO_VIDEO.mp4} type="video/mp4" />
+              {HERO_VIDEO.mp4 && <source src={HERO_VIDEO.mp4} type="video/mp4" />}
             </video>
           )}
         </motion.div>

@@ -40,8 +40,7 @@ export const productCategories: ProductCategory[] = [
           },
           {
             label: "Shutter Speed",
-            value:
-              "PAL: 1/25 s–1/100,000 s, NTSC: 1/30 s–1/100,000 s",
+            value: "PAL: 1/25 s–1/100,000 s, NTSC: 1/30 s–1/100,000 s",
           },
           { label: "White Balance", value: "Auto, Area white balance" },
           { label: "Lens Mount", value: "M12" },
@@ -70,8 +69,7 @@ export const productCategories: ProductCategory[] = [
           { label: "Back Light Compensation", value: "BLC / HLC / DWDR" },
           {
             label: "Video Output",
-            value:
-              "Video output choices of CVI/TVI/AHD/CVBS by one BNC port",
+            value: "Video output choices of CVI/TVI/AHD/CVBS by one BNC port",
           },
           {
             label: "Resolution",
@@ -114,8 +112,7 @@ export const productCategories: ProductCategory[] = [
         specifications: [
           {
             label: "Image Sensor",
-            value:
-              '1/3" 5MP CMOS Image Sensor (0.84667 centimeters)',
+            value: '1/3" 5MP CMOS Image Sensor (0.84667 centimeters)',
           },
           { label: "Effective Pixels", value: "2880 (H) × 1620 (V)" },
           {
@@ -129,8 +126,7 @@ export const productCategories: ProductCategory[] = [
           },
           {
             label: "Shutter Speed",
-            value:
-              "PAL: 1/25 s–1/100000 s, NTSC: 1/30 s–1/100000 s",
+            value: "PAL: 1/25 s–1/100000 s, NTSC: 1/30 s–1/100000 s",
           },
           { label: "White Balance", value: "Auto, Manual" },
           { label: "Lens", value: "3.6mm Fixed Lens" },
@@ -227,8 +223,7 @@ export const productCategories: ProductCategory[] = [
           },
           {
             label: "Shutter Speed",
-            value:
-              "PAL: 1/25 s–1/100,000 s, NTSC: 1/30 s–1/100,000 s",
+            value: "PAL: 1/25 s–1/100,000 s, NTSC: 1/30 s–1/100,000 s",
           },
           { label: "Lens", value: "3.6mm (2.8mm and 6mm optional)" },
           {
@@ -259,8 +254,7 @@ export const productCategories: ProductCategory[] = [
           { label: "White Balance", value: "Auto" },
           {
             label: "Video Output",
-            value:
-              "Video output choices of CVI/TVI/AHD/CVBS by one BNC port",
+            value: "Video output choices of CVI/TVI/AHD/CVBS by one BNC port",
           },
           { label: "Noise Reduction", value: "2D DNR" },
           { label: "Gain Control (AGC)", value: "Auto" },
@@ -327,8 +321,7 @@ export const productCategories: ProductCategory[] = [
         specifications: [
           {
             label: "Image Sensor",
-            value:
-              '1/3" 5MP CMOS Image Sensor (0.84667 centimeters)',
+            value: '1/3" 5MP CMOS Image Sensor (0.84667 centimeters)',
           },
           {
             label: "Minimum Illumination",
@@ -342,8 +335,7 @@ export const productCategories: ProductCategory[] = [
           },
           {
             label: "Shutter Speed",
-            value:
-              "PAL: 1/25 s–1/100,000 s, NTSC: 1/30 s–1/100,000 s",
+            value: "PAL: 1/25 s–1/100,000 s, NTSC: 1/30 s–1/100,000 s",
           },
           { label: "White Balance", value: "Auto, Manual" },
           { label: "Lens Type", value: "Fixed-focal" },
@@ -362,13 +354,11 @@ export const productCategories: ProductCategory[] = [
           { label: "Back Light Compensation", value: "BLC, DWDR" },
           {
             label: "Video Output",
-            value:
-              "Video output choices of CVI/TVI/AHD/CVBS by one BNC port",
+            value: "Video output choices of CVI/TVI/AHD/CVBS by one BNC port",
           },
           {
             label: "Resolution",
-            value:
-              "5M (2880 × 1620), 4M (2560 × 1440), 1080p (1920 × 1080)",
+            value: "5M (2880 × 1620), 4M (2560 × 1440), 1080p (1920 × 1080)",
           },
           {
             label: "Frame Rate",
@@ -442,8 +432,7 @@ export const productCategories: ProductCategory[] = [
           },
           {
             label: "Shutter Speed",
-            value:
-              "PAL: 1/25 s–1/100,000 s, NTSC: 1/30 s–1/100,000 s",
+            value: "PAL: 1/25 s–1/100,000 s, NTSC: 1/30 s–1/100,000 s",
           },
           { label: "White Balance", value: "Auto, Area white Balance" },
           { label: "Lens Type", value: "Fixed-focal" },
@@ -469,8 +458,7 @@ export const productCategories: ProductCategory[] = [
           { label: "Back Light Compensation", value: "BLC/HLC/DWDR" },
           {
             label: "Video Output",
-            value:
-              "Video output choices of CVI/TVI/AHD/CVBS by one BNC port",
+            value: "Video output choices of CVI/TVI/AHD/CVBS by one BNC port",
           },
           {
             label: "Resolution",
@@ -528,75 +516,182 @@ export const productCategories: ProductCategory[] = [
     icon: "Fingerprint",
     products: [
       {
-        slug: "biometric-door-locks",
-        sku: "biometric-door-locks",
-        name: "Biometric Door Locks",
+        slug: "biometric-fingerprint-smart-lock",
+        sku: "BIO-FP-SMART-LOCK",
+        name: "Biometric Fingerprint RFID Smart Lock",
         brand: "",
+        image: "/images/biometrics/fingerprint-rfid-biometrics.png",
         shortDescription:
-          "Smart locks using fingerprint or face recognition",
+          "Keyless smart lock with fingerprint, password, RFID card, and mechanical key access. Ideal for homes, offices, and apartments.",
         features: [
-          "Fingerprint + password + card backup",
-          "Stainless steel construction",
-          "Low battery warning",
-          "Audit trail logging",
-          "IP54 weather resistant",
+          "Fingerprint unlock with high-accuracy sensor",
+          "Password, RFID card, and mechanical key backup",
+          "Built-in doorbell and tamper alarm",
+          "Low battery warning and emergency power port",
+          "Reversible handle for left/right door installation",
+          "Up to 100 fingerprint and 100 password users",
+          "Weather-resistant for outdoor use (IP54)",
+          "Audit trail and access logs",
+          "Easy DIY installation with standard door prep",
+        ],
+        specifications: [
+          {
+            label: "Access Methods",
+            value: "Fingerprint, Password, RFID Card, Mechanical Key",
+          },
+          { label: "Fingerprint Capacity", value: "100" },
+          { label: "Password Capacity", value: "100" },
+          { label: "Card Capacity", value: "100" },
+          { label: "Log Capacity", value: "1000 events" },
+          { label: "Material", value: "Zinc alloy and stainless steel" },
+          {
+            label: "Power Supply",
+            value: "4 × AA alkaline batteries (or 6V DC)",
+          },
+          { label: "Battery Life", value: "Approx. 12 months (10 uses/day)" },
+          { label: "Emergency Power", value: "Micro-USB port" },
+          { label: "Working Temperature", value: "-20°C to +60°C" },
+          { label: "Working Humidity", value: "10% to 90% RH" },
+          { label: "Protection Level", value: "IP54" },
+          { label: "Door Thickness", value: "38–55 mm" },
+          {
+            label: "Dimensions",
+            value: "Front: 160 × 70 × 25 mm, Back: 150 × 65 × 30 mm",
+          },
+          { label: "Weight", value: "1.1 kg" },
         ],
       },
       {
-        slug: "face-recognition",
-        sku: "face-recognition",
-        name: "Fingerprint & Face Recognition Terminals",
-        brand: "",
-        shortDescription: "Multi-modal biometric access terminals",
-        features: [
-          "Fingerprint + facial recognition",
-          "3.5-inch display screen",
-          "Network connectivity",
-          "USB data backup",
-          "Support for 5,000+ users",
-        ],
-      },
-      {
-        slug: "rfid-card-access",
-        sku: "rfid-card-access",
-        name: "RFID/Card Access Systems",
-        brand: "",
-        shortDescription: "Card-based access control for multiple users",
-        features: [
-          "13.56 MHz RFID technology",
-          "Compatible with standard ID cards",
-          "Real-time access logging",
-          "Multi-door support",
-          "Low maintenance operation",
-        ],
-      },
-      {
-        slug: "time-attendance",
-        sku: "time-attendance",
-        name: "Time Attendance Machines",
-        brand: "",
-        shortDescription: "Automated employee time tracking systems",
-        features: [
-          "Fingerprint or face recognition",
-          "Real-time data sync",
-          "Attendance reports and analytics",
-          "Network integration",
-          "Cloud backup support",
-        ],
-      },
-      {
-        slug: "em-locks",
-        sku: "em-locks",
-        name: "Electromagnetic Locks & Exit Buttons",
-        brand: "",
+        slug: "hikvision-ds-k1t342mfw-e1",
+        sku: "DS-K1T342MFWX-E1",
+        name: "Hikvision Face Recognition Terminal",
+        brand: "Hikvision",
+        image: "/images/biometrics/face-recognition-terminal-hikvision.png",
         shortDescription:
-          "Electric locking systems for secure access control",
+          "Advanced face recognition terminal with deep learning algorithm, 4.3-inch touch screen, supports face, card, and fingerprint authentication. Up to 1500 faces, 3000 fingerprints, 3000 cards. IP65 rated, PoE, and built-in Wi-Fi for seamless access control.",
         features: [
-          "600 lbs holding force",
-          "12/24VDC operation",
-          "Emergency release button",
-          "Weatherproof design",
-          "Universal door compatibility",
+          "Deep learning algorithm for fast, accurate face recognition",
+          "Supports face, card, and fingerprint authentication",
+          "Max. 1500 faces, 3000 fingerprints, 3000 cards capacity",
+          "4.3-inch LCD capacitive touch screen",
+          "2 MP wide-angle dual-lens camera",
+          "Face recognition distance: 0.3 m to 1.5 m; duration < 0.2 s; accuracy ≥ 99%",
+          "Supports face with mask recognition",
+          "Built-in M1 card reading module (13.56 MHz)",
+          "Two-way audio with client software, indoor station, and main station",
+          "TCP/IP, Wi-Fi, ISAPI, ISUP5.0 support",
+          "PoE (IEEE802.3at) and 12 VDC power supply; powers door lock (12 VDC/1 A)",
+          "IP65 protective level for indoor/outdoor installation",
+        ],
+        specifications: [
+          { label: "Operating System", value: "Linux" },
+          {
+            label: "Display",
+            value: "4.3-inch, 272 × 480, LCD, Capacitive touch screen",
+          },
+          { label: "Video Pixel", value: "2 MP" },
+          { label: "Lens", value: "× 2" },
+          { label: "Video Standard", value: "PAL (Default) and NTSC" },
+          {
+            label: "Wired Network",
+            value: "10 M/100 M self-adaptive",
+          },
+          { label: "Wi-Fi", value: "Support" },
+          { label: "PoE", value: "IEEE802.3at, standard PoE" },
+          { label: "Network Interface", value: "1" },
+          { label: "RS-485", value: "1" },
+          { label: "Wiegand", value: "1" },
+          { label: "Lock Output", value: "1" },
+          { label: "Exit Button", value: "1" },
+          { label: "Door Contact Input", value: "1" },
+          { label: "TAMPER", value: "1" },
+          { label: "USB", value: "1" },
+          { label: "Card Capacity", value: "3,000" },
+          { label: "Face Capacity", value: "1,500" },
+          { label: "Fingerprint Capacity", value: "3,000" },
+          { label: "Event Capacity", value: "150,000" },
+          { label: "Card Type", value: "M1 card" },
+          { label: "Card Reading Frequency", value: "13.56 MHz" },
+          { label: "Face Recognition Duration", value: "< 0.2 s" },
+          { label: "Face Recognition Accuracy Rate", value: "> 99%" },
+          {
+            label: "Face Recognition Distance",
+            value: "0.3 to 1.5 m",
+          },
+          { label: "Fingerprint Recognition Duration", value: "< 1 s" },
+          {
+            label: "Power Supply",
+            value:
+              "Power input: Power interface (power adapter included, 12 VDC/1 A) or PoE (37 to 57 VDC/0.6 A)\nPower output: Power supply for door lock, 12 VDC/1 A (only when the device is powered by PoE supporting powering supply for door lock)",
+          },
+          {
+            label: "Working Temperature",
+            value: "-30 °C to 60 °C (-22 °F to 140 °F)",
+          },
+          {
+            label: "Working Humidity",
+            value: "0 to 90% (No condensing)",
+          },
+          {
+            label: "Dimensions",
+            value: '91.3 mm × 181.3 mm × 24.5 mm (3.59" × 7.14" × 0.96")',
+          },
+          { label: "Installation", value: "Wall Mounting" },
+          { label: "Protective Level", value: "IP65" },
+          {
+            label: "Weight",
+            value:
+              "Gross weight: 0.93 kg (2.05 lbs)\nNet weight: 0.36 kg (0.79 lbs)",
+          },
+          {
+            label: "Language",
+            value:
+              "English, Spanish (South America), Arabic, Thai, Indonesian, Russian, Vietnamese, Portuguese (Brazil), Korean",
+          },
+          { label: "Face Anti-Spoofing", value: "Support" },
+          { label: "Audio Prompt", value: "Support" },
+          { label: "Time Synchronization", value: "Support" },
+        ],
+      },
+      {
+        slug: "realtime-t52f",
+        sku: "T52F",
+        name: "Realtime T52F Face & Fingerprint Attendance Recorder with Access Control",
+        brand: "Realtime",
+        image: "/images/biometrics/realtime-face-attendance-system.png",
+        shortDescription:
+          "Face, fingerprint, card, and password attendance system with built-in access control. 3-inch LCD, TCP/IP, Wi-Fi, optional 4G, 500 face capacity, 3000 fingerprint/card capacity, and 300,000 log storage.",
+        features: [
+          "Supports Face, Fingerprint, Card, and Password authentication",
+          "Face capacity: 500, Fingerprint capacity: 3000, Card capacity: 3000, Password capacity: 3000",
+          "Max attendance log: 300,000 records",
+          "3-inch LCD display",
+          "Communication: TCP/IP, Wi-Fi, 4G (optional)",
+          "USB disk support for data transfer",
+          "Built-in battery backup",
+          "Integrated access control (door lock relay, exit button, etc.)",
+          "Self-test function",
+          "Working voltage: DC12V, Temperature: -10°C to +50°C, Humidity: 20% to 80% RH",
+        ],
+        specifications: [
+          { label: "Face Capacity", value: "500" },
+          { label: "Card Capacity", value: "3000" },
+          { label: "Fingerprint Capacity", value: "3000" },
+          { label: "Password Capacity", value: "3000" },
+          { label: "Max Attendance Log", value: "300,000" },
+          {
+            label: "Identify Mode",
+            value: "Face, Fingerprint, card, password and combinations",
+          },
+          { label: "Display", value: "3 Inch LCD" },
+          { label: "Communication", value: "TCP/IP, WIFI, 4G(Optional)" },
+          { label: "U-disk", value: "Supported" },
+          { label: "Battery", value: "Built-In Battery Backup" },
+          { label: "Working Voltage", value: "DC12V" },
+          { label: "Working Temperature", value: "-10℃~+50℃" },
+          { label: "Working Humidity (RH)", value: "20% ~ 80%" },
+          { label: "Self-test Function", value: "Supported" },
+          { label: "Access Control", value: "Built In" },
         ],
       },
     ],
@@ -609,45 +704,59 @@ export const productCategories: ProductCategory[] = [
     icon: "Video",
     products: [
       {
-        slug: "wired-video-door-phone",
-        sku: "wired-video-door-phone",
-        name: "Wired Video Door Phones",
+        slug: "vdp-sx",
+        sku: "VDP-sx",
+        name: "Video Door phone IP SIP Video Intercom Kit",
         brand: "",
-        shortDescription: "Fixed installation video intercoms",
+        image: "/images/biometrics/video-door-phone-kit.png",
+        shortDescription:
+          "IP SIP video intercom kit with 7-inch touch screen room monitor and IP65 door station. Supports 2MP FHD video, Wi-Fi, SIP integration, SD card recording, and door lock release for residential and commercial access control.",
         features: [
-          "7-inch LCD display",
-          "HD camera lens",
-          "Night vision capability",
-          "Two-way audio communication",
-          "Electric lock integration",
+          "7-inch TN LCD room monitor with capacitive touch screen",
+          "IP65 & high rated aluminum",
+          "2MP FHD camera with 120° wide-angle view",
+          "Night vision with clearer vision",
+          "Smartphone control and access (iOS & Android)",
+          "3rd-party SIP device compatibility (SIP/Alarm/RTSP)",
+          "Auto & manual video/picture recording",
+          "SD card slot up to 32GB",
+          "Supports multiple alarm zones",
+          "Noise suppression and echo cancellation",
+          "Door lock release port",
         ],
-      },
-      {
-        slug: "wireless-video-door-phone",
-        sku: "wireless-video-door-phone",
-        name: "Wireless Video Door Phones",
-        brand: "",
-        shortDescription: "Cordless video intercom systems",
-        features: [
-          "2.4 GHz wireless transmission",
-          "Battery powered",
-          "3-inch portable monitor",
-          "Motion detection alert",
-          "Easy plug-and-play setup",
-        ],
-      },
-      {
-        slug: "multi-apartment-video",
-        sku: "multi-apartment-video",
-        name: "Multi-Apartment Video Door Phone Systems",
-        brand: "",
-        shortDescription: "Centralized systems for apartment complexes",
-        features: [
-          "Up to 100+ apartments support",
-          "IP-based architecture",
-          "Mobile app access",
-          "Video recording capability",
-          "Master control panel",
+        specifications: [
+          {
+            label: "Room Monitor Display",
+            value: "7-inch TN LCD with capacitive touch screen",
+          },
+          {
+            label: "Door Station Camera",
+            value: "2MP FHD (1920 × 1080), Color HD CMOS",
+          },
+          { label: "Viewing Angle", value: "H: 120°, V: 62°, D: 145°" },
+          { label: "Night Vision", value: "LED" },
+          { label: "Door Station Rating", value: "IP65, IK07" },
+          { label: "Door Station Housing", value: "Aluminum alloy" },
+          { label: "Communication", value: "TCP/IP, SIP, RTSP, Alarm" },
+          { label: "SD Card Slot", value: "Up to 32GB" },
+          { label: "Alarm Zones", value: "8" },
+          { label: "PoE", value: "IEEE 802.3af (Door Station)" },
+          {
+            label: "Power Supply",
+            value: "DC 12V, 1.5A–2.0A (18W–24W) via adaptor, or PoE",
+          },
+          { label: "Door Lock Release", value: "Supported" },
+          { label: "Audio", value: "Noise suppression & echo cancellation" },
+          { label: "Operating Temperature", value: "-10°C to +55°C" },
+          {
+            label: "Door Station Dimensions",
+            value: "133(H) × 48(W) × 21(D) mm",
+          },
+          { label: "Door Station Weight", value: "Approx. 190g" },
+          {
+            label: "Installation",
+            value: "Surface mounted, corner bracket available",
+          },
         ],
       },
     ],
@@ -678,8 +787,7 @@ export const productCategories: ProductCategory[] = [
         sku: "pir-sensors",
         name: "Motion/PIR Sensors",
         brand: "",
-        shortDescription:
-          "Passive infrared sensors for motion detection",
+        shortDescription: "Passive infrared sensors for motion detection",
         features: [
           "12-meter detection range",
           "Pet-immune options available",
@@ -693,8 +801,7 @@ export const productCategories: ProductCategory[] = [
         sku: "door-window-sensors",
         name: "Door & Window Sensors",
         brand: "",
-        shortDescription:
-          "Magnetic contact switches for entry protection",
+        shortDescription: "Magnetic contact switches for entry protection",
         features: [
           "Wireless and wired models",
           "Surface or recessed mount",
@@ -745,8 +852,7 @@ export const productCategories: ProductCategory[] = [
         sku: "epabx-systems",
         name: "EPABX Systems",
         brand: "",
-        shortDescription:
-          "Private branch exchange for office communications",
+        shortDescription: "Private branch exchange for office communications",
         features: [
           "4 to 128 extensions",
           "Caller ID display",
@@ -760,8 +866,7 @@ export const productCategories: ProductCategory[] = [
         sku: "intercom-handsets",
         name: "Intercom Handsets & Accessories",
         brand: "",
-        shortDescription:
-          "Communication devices for internal systems",
+        shortDescription: "Communication devices for internal systems",
         features: [
           "Wall-mounted or desk models",
           "Push-button or digital keypads",
@@ -775,8 +880,7 @@ export const productCategories: ProductCategory[] = [
         sku: "apartment-intercom",
         name: "Apartment Intercom Systems",
         brand: "",
-        shortDescription:
-          "Intercoms designed for apartment complexes",
+        shortDescription: "Intercoms designed for apartment complexes",
         features: [
           "Master and sub-unit design",
           "Electric door lock control",
@@ -799,8 +903,7 @@ export const productCategories: ProductCategory[] = [
         sku: "smoke-detectors",
         name: "Smoke Detectors",
         brand: "",
-        shortDescription:
-          "Early warning devices for fire detection",
+        shortDescription: "Early warning devices for fire detection",
         features: [
           "Photoelectric technology",
           "Ultra-low false alarm rate",
@@ -814,8 +917,7 @@ export const productCategories: ProductCategory[] = [
         sku: "fire-alarm-panels",
         name: "Fire Alarm Panels",
         brand: "",
-        shortDescription:
-          "Central fire monitoring and control systems",
+        shortDescription: "Central fire monitoring and control systems",
         features: [
           "Multi-detector support",
           "Audible and visual alarms",
@@ -829,8 +931,7 @@ export const productCategories: ProductCategory[] = [
         sku: "fire-extinguishers",
         name: "Fire Extinguishers",
         brand: "",
-        shortDescription:
-          "Portable fire suppression equipment",
+        shortDescription: "Portable fire suppression equipment",
         features: [
           "ABC, CO2, and specialty types",
           "1kg to 50kg sizes",
@@ -844,8 +945,7 @@ export const productCategories: ProductCategory[] = [
   {
     slug: "cabling-networking",
     title: "Cabling & Networking",
-    description:
-      "Infrastructure solutions for data and power distribution.",
+    description: "Infrastructure solutions for data and power distribution.",
     icon: "Wifi",
     products: [
       {
@@ -867,8 +967,7 @@ export const productCategories: ProductCategory[] = [
         sku: "lan-network",
         name: "LAN/Network Setup & Installation",
         brand: "",
-        shortDescription:
-          "Complete network installation services",
+        shortDescription: "Complete network installation services",
         features: [
           "On-site survey and planning",
           "Professional cabling installation",
@@ -882,8 +981,7 @@ export const productCategories: ProductCategory[] = [
         sku: "electrical-wiring",
         name: "Electrical Wiring & Distribution",
         brand: "",
-        shortDescription:
-          "Power supply and distribution systems",
+        shortDescription: "Power supply and distribution systems",
         features: [
           "Heavy-duty cables and conduits",
           "Distribution boards",

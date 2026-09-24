@@ -20,7 +20,7 @@ export function ProductCard({ product, categorySlug }: ProductCardProps) {
               src={product.image}
               alt={product.name}
               fill
-              className="object-cover"
+              className="object-contain"
             />
           </div>
         )}
