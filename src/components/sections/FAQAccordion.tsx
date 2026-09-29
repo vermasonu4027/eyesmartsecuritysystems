@@ -1,10 +1,18 @@
 "use client";
 
+import Link from "next/link";
 import { faqs } from "@/data/faqs";
 import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
 import { fadeInUpVariant, fadeInUpContainer } from "@/lib/motion";
 
-export function FAQAccordion() {
+interface FAQAccordionProps {
+  limit?: number;
+}
+
+export function FAQAccordion({ limit }: FAQAccordionProps) {
+  const displayFaqs = limit ? faqs.slice(0, limit) : faqs;
+
   return (
     <motion.section
       initial="hidden"
@@ -22,7 +30,7 @@ export function FAQAccordion() {
         </motion.div>
 
         <div className="space-y-4">
-          {faqs.map((faq, idx) => (
+          {displayFaqs.map((faq, idx) => (
             <motion.details key={idx} variants={fadeInUpVariant} className="bg-card border border-border rounded-lg p-6 cursor-pointer group">
               <summary className="font-semibold flex items-center justify-between">
                 {faq.question}
@@ -32,6 +40,16 @@ export function FAQAccordion() {
             </motion.details>
           ))}
         </div>
+
+        {limit && (
+          <motion.div variants={fadeInUpVariant} className="flex justify-center mt-12">
+            <Link href="/faqs">
+              <Button size="lg" variant="default">
+                Read More FAQs
+              </Button>
+            </Link>
+          </motion.div>
+        )}
       </div>
     </motion.section>
   );

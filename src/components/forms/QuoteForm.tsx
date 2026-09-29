@@ -77,12 +77,18 @@ export function QuoteForm() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label className="block text-sm font-medium mb-2">Phone Number *</label>
-          <input
-            {...register("phone")}
-            type="tel"
-            placeholder="10-digit mobile number"
-            className="w-full px-4 py-2 rounded-lg border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition"
-          />
+          <div className="flex gap-0">
+            <div className="flex items-center rounded-l-lg border border-border border-r-0 bg-background px-4 py-2 font-medium text-foreground">
+              +91
+            </div>
+            <input
+              {...register("phone")}
+              type="tel"
+              placeholder="10-digit mobile number"
+              maxLength={10}
+              className="flex-1 px-4 py-2 rounded-r-lg border border-border border-l-0 bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition"
+            />
+          </div>
           {errors.phone && <p className="text-destructive text-sm mt-1">{errors.phone.message}</p>}
         </div>
 
