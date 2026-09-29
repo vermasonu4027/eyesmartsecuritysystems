@@ -22,8 +22,8 @@ export function TrustStrip() {
     >
       <div className="container">
         <motion.div className="text-center mb-12" variants={fadeInUpVariant}>
-          <h2 className="text-3xl font-bold mb-3">Trusted by Leading Brands</h2>
-          <p className="text-muted-foreground">We partner with industry-leading organizations</p>
+          <h2 className="text-3xl font-bold mb-3">Quality Equipment We Install</h2>
+          <p className="text-muted-foreground">We install and service equipment from leading manufacturers</p>
         </motion.div>
 
         <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
@@ -42,7 +42,7 @@ export function TrustStrip() {
         </div>
 
         <motion.p variants={fadeInUpVariant} className="text-center text-sm text-muted-foreground mt-12">
-          Placeholder logos — replace with real partner/client logos
+          Placeholder — replace with manufacturer/equipment logos we work with
         </motion.p>
       </div>
     </motion.section>

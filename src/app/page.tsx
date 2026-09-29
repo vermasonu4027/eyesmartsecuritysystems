@@ -59,7 +59,7 @@ export default function HomePage() {
       <Process />
       <Testimonials />
       <CoverageMap />
-      <FAQAccordion />
+      <FAQAccordion limit={4} />
       <CTABanner />
     </>
   );

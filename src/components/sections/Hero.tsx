@@ -21,7 +21,7 @@ const item = {
 
 const chips = [
   { icon: CalendarDays, label: `Since ${business.founded}` },
-  { icon: ShieldCheck, label: "1000+ installations" },
+  { icon: ShieldCheck, label: "3000+ installations" },
   { icon: Clock, label: business.hours.emergency },
 ];
 
@@ -70,15 +70,15 @@ export function Hero() {
       <HeroBackground scrollY={bgScrollY} x={bgX} y={bgY} />
 
       <div className="container relative z-10 mx-auto max-w-4xl text-center">
-        <h1 className="mb-6 text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-7xl">
+        <h1 className="mb-6 text-3xl font-bold leading-[1.05] tracking-tight sm:text-4xl lg:text-5xl">
           Delhi NCR&apos;s <span className="text-green-400">Trusted</span> Security Partner Since{" "}
-          {business.founded}.
+          {business.founded}
         </h1>
 
         <motion.div variants={container} initial="hidden" animate="visible">
           <motion.p
             variants={item}
-            className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-slate-200 md:text-xl"
+            className="mx-auto mb-10 max-w-2xl text-sm leading-relaxed text-slate-200 md:text-lg"
           >
             Professional CCTV, biometric access control and smart security for homes, offices and
             industrial sites, from site survey to 24/7 support.
@@ -95,25 +95,32 @@ export function Hero() {
                 Your mobile number
               </label>
               <div className="flex flex-col gap-3 sm:flex-row">
-                <input
-                  id="phone-input"
-                  type="tel"
-                  inputMode="tel"
-                  autoComplete="tel"
-                  placeholder="Enter your phone number"
-                  value={phone}
-                  onChange={(e) => {
-                    setPhone(e.target.value);
-                    setError("");
-                  }}
-                  aria-invalid={error ? true : undefined}
-                  aria-describedby={error ? "phone-error" : undefined}
-                  className="flex-1 rounded-lg border border-white/20 bg-white/95 px-4 py-3 text-slate-900 placeholder:text-slate-500 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-white/80 disabled:opacity-60"
-                  disabled={loading}
-                />
+                <div className="flex flex-1 gap-0">
+                  <div className="flex items-center rounded-l-lg border border-white/20 border-r-0 bg-white/95 px-4 py-3 text-slate-900 font-medium">
+                    +91
+                  </div>
+                  <input
+                    id="phone-input"
+                    type="tel"
+                    inputMode="tel"
+                    autoComplete="tel"
+                    placeholder="10-digit mobile number"
+                    value={phone}
+                    onChange={(e) => {
+                      const val = e.target.value.replace(/\D/g, "").slice(0, 10);
+                      setPhone(val);
+                      setError("");
+                    }}
+                    maxLength={10}
+                    aria-invalid={error ? true : undefined}
+                    aria-describedby={error ? "phone-error" : undefined}
+                    className="flex-1 rounded-r-lg border border-white/20 border-l-0 bg-white/95 px-4 py-3 text-slate-900 placeholder:text-slate-500 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-white/80 disabled:opacity-60"
+                    disabled={loading}
+                  />
+                </div>
                 <Button
                   type="submit"
-                  size="lg"
+                  size="sm"
                   loading={loading}
                   className="bg-primary-hover text-white transition-transform hover:scale-[1.02] hover:bg-green-800 focus-visible:ring-white/80"
                 >

@@ -158,7 +158,7 @@ export default function ContactPage() {
               <p className="text-muted-foreground">Emergency Support Available</p>
             </div>
             <div>
-              <p className="text-3xl font-bold text-primary mb-2">1000+</p>
+              <p className="text-3xl font-bold text-primary mb-2">3000+</p>
               <p className="text-muted-foreground">Installations & Counting</p>
             </div>
             <div>
@@ -181,7 +181,7 @@ export default function ContactPage() {
               ))}
             </div>
             <p className="text-sm text-muted-foreground mt-6 text-center">
-              <a href="/#faqs" className="text-primary hover:underline">View all FAQs →</a>
+              <a href="/faqs" className="text-primary hover:underline">View all FAQs →</a>
             </p>
           </div>
         </div>
