@@ -11,10 +11,10 @@ export const metadata: Metadata = buildMetadata(
 export default function FAQsPage() {
   return (
     <>
-      <section className="relative py-20 md:py-32 overflow-hidden">
+      <section className="relative py-30 md:py-42 overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/placeholder-hero.svg"
+            src="/images/bgCover/faqs_bg.jpg"
             alt="FAQs hero background"
             fill
             className="object-cover"

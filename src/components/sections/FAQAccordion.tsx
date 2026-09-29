@@ -22,12 +22,12 @@ export function FAQAccordion({ limit }: FAQAccordionProps) {
       className="py-20 bg-surface"
     >
       <div className="container max-w-3xl">
-        <motion.div className="text-center mb-12" variants={fadeInUpVariant}>
+        {/* <motion.div className="text-center mb-12" variants={fadeInUpVariant}>
           <h2 className="text-4xl font-bold mb-4">Frequently Asked Questions</h2>
           <p className="text-lg text-muted-foreground">
             Find answers to common questions about our security systems
           </p>
-        </motion.div>
+        </motion.div> */}
 
         <div className="space-y-4">
           {displayFaqs.map((faq, idx) => (
