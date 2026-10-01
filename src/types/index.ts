@@ -84,6 +84,7 @@ export interface BlogPost {
   author?: string;
   content: string;
   readingTime?: number;
+  faqs?: Array<{ q: string; a: string }>;
 }
 
 export interface BlogFrontmatter {

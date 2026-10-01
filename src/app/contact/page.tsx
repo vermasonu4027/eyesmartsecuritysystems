@@ -1,12 +1,15 @@
 import { QuoteForm } from "@/components/forms/QuoteForm";
 import { business } from "@/data/business";
 import { faqs } from "@/data/faqs";
+import { buildMetadata } from "@/lib/seo";
+import { PageHero } from "@/components/sections/PageHero";
 import { MapPin, Phone, Clock, MessageSquare } from "lucide-react";
 
-export const metadata = {
-  title: "Contact Us - Get a Free Quote | Eye Smart Security Systems",
-  description: "Contact Eye Smart Security Systems for a free security quote. Call +91 6307972402 or fill out our contact form. We respond within 24 hours.",
-};
+export const metadata = buildMetadata(
+  "Contact Us",
+  "Contact Eye Smart Security Systems for a free security quote. Call +91 6307972402 or fill out our contact form. We respond within 24 hours.",
+  "/contact"
+);
 
 export default function ContactPage() {
   const localBusinessSchema = {
@@ -51,16 +54,14 @@ export default function ContactPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
 
-      <div className="py-12 md:py-20 bg-gradient-to-br from-primary/5 to-background">
-        <div className="container">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Get a Free Security Quote</h1>
-            <p className="text-xl text-muted-foreground">
-              Let our experts assess your security needs and recommend the perfect solution for your property.
-            </p>
-          </div>
-        </div>
-      </div>
+      <PageHero
+        title="Get a Free Security Quote"
+        description="Let our experts assess your security needs and recommend the perfect solution for your property."
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Contact" },
+        ]}
+      />
 
       <div className="container py-20">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
