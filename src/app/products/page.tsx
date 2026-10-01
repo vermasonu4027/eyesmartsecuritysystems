@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { productCategories } from "@/data/products";
+import { PageHero } from "@/components/sections/PageHero";
 import { Button } from "@/components/ui/button";
 import { ProductGrid } from "@/components/products/ProductGrid";
 
@@ -13,16 +14,23 @@ export default function ProductsPage() {
     : productCategories;
 
   return (
-    <div className="container py-20">
-      <div className="mb-12">
-        <h1 className="text-4xl font-bold mb-4">Our Security Solutions</h1>
-        <p className="text-lg text-muted-foreground">
-          Comprehensive product range to protect homes, offices, and industries
-        </p>
-      </div>
+    <>
+      <PageHero
+        title="Our Security Solutions"
+        description="Comprehensive product range to protect homes, offices, and industries"
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Products" },
+        ]}
+        primaryCta={{
+          label: "Get Free Quote",
+          href: "/contact",
+        }}
+      />
 
-      {/* Category Filter */}
-      <div className="mb-12 flex flex-wrap gap-3">
+      <div className="container py-20">
+        {/* Category Filter */}
+        <div className="mb-12 flex flex-wrap gap-3">
         <Button
           variant={activeCategory === null ? "default" : "outline"}
           onClick={() => setActiveCategory(null)}
@@ -38,10 +46,10 @@ export default function ProductsPage() {
             {cat.title}
           </Button>
         ))}
-      </div>
+        </div>
 
-      {/* Categories & Products */}
-      <div className="space-y-16">
+        {/* Categories & Products */}
+        <div className="space-y-16">
         {filteredCategories.map((category) => (
           <section key={category.slug} id={category.slug}>
             <div className="mb-8">
@@ -52,7 +60,8 @@ export default function ProductsPage() {
             <ProductGrid products={category.products} categorySlug={category.slug} />
           </section>
         ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }

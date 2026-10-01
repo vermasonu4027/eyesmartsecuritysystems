@@ -1,26 +1,32 @@
 import { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
+import { PageHero } from "@/components/sections/PageHero";
 import { AnimatedStats } from "@/components/sections/AnimatedStats";
 import { TrustStrip } from "@/components/sections/TrustStrip";
 
 export const metadata: Metadata = buildMetadata(
   "About Us",
-  "Learn about Eye Smart Security Systems — Delhi NCR's trusted security partner since 2013. We've installed systems in over 1,000 homes and businesses."
+  "Learn about Eye Smart Security Systems — Delhi NCR's trusted security partner since 2013. We've installed systems in over 1,000 homes and businesses.",
+  "/about"
 );
 
 export default function AboutPage() {
   return (
     <>
-      <section className="py-20 md:py-32">
-        <div className="container max-w-3xl">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">Delhi NCR's Trusted Security Partner Since 2013</h1>
-          <p className="text-xl text-muted-foreground leading-relaxed">
-            EYE SMART SECURITY SYSTEMS is a top-rated security system supplier and installer serving Noida, Greater Noida, and Ghaziabad since 2013. We bring professional-grade security solutions within reach of every home and business.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        title="Delhi NCR's Trusted Security Partner Since 2013"
+        description="EYE SMART SECURITY SYSTEMS is a top-rated security system supplier and installer serving Noida, Greater Noida, and Ghaziabad since 2013. We bring professional-grade security solutions within reach of every home and business."
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "About" },
+        ]}
+        primaryCta={{
+          label: "Get Free Quote",
+          href: "/contact",
+        }}
+      />
 
-      <section className="py-20 bg-surface">
+      <section className="py-20 md:py-32 bg-surface">
         <div className="container max-w-3xl">
           <h2 className="text-4xl font-bold mb-6">Our Story</h2>
           <p className="text-lg text-muted-foreground mb-6 leading-relaxed">

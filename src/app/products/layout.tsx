@@ -3,7 +3,8 @@ import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata(
   "Security Products",
-  "Browse our comprehensive range of CCTV systems, access control, biometric solutions, alarm systems, and more for home and business security."
+  "Browse our comprehensive range of CCTV systems, access control, biometric solutions, alarm systems, and more for home and business security.",
+  "/products"
 );
 
 export default function ProductsLayout({
