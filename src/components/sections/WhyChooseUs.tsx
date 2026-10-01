@@ -8,7 +8,7 @@ export function WhyChooseUs() {
   const reasons = [
     {
       title: "13+ Years of Experience",
-      description: "Trusted security partner since 2013 with 1000+ successful installations",
+      description: "Trusted security partner since 2013 with 3000+ successful installations",
     },
     {
       title: "Expert Technicians",
@@ -28,7 +28,7 @@ export function WhyChooseUs() {
     },
     {
       title: "Fast Installation",
-      description: "Most systems installed within 1-2 days with minimal disruption 98% uptime",
+      description: "Most systems installed within 1-2 days with minimal disruption 99% uptime",
     },
   ];
 

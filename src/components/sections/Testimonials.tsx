@@ -18,7 +18,7 @@ export function Testimonials() {
         <motion.div className="text-center mb-12" variants={fadeInUpVariant}>
           <h2 className="text-4xl font-bold mb-4">What Our Customers Say</h2>
           <p className="text-lg text-muted-foreground">
-            Trusted by 1000+ satisfied customers across Delhi NCR
+            Trusted by 3000+ satisfied customers across Delhi NCR
           </p>
         </motion.div>
 

@@ -27,8 +27,8 @@ export function Header() {
 
   return (
     <>
-      <div className="hidden md:block bg-black border-b border-border">
-        <div className="container py-2 text-sm text-center text-white">
+      <div className="hidden md:block bg-gradient-to-r from-primary to-primary-hover border-b border-border">
+        <div className="container py-1 text-sm text-center text-white">
           Serving all of Delhi NCR · Mon-Sat 9AM-8PM
         </div>
       </div>

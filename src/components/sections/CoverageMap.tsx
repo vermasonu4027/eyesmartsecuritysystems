@@ -17,7 +17,7 @@ export function CoverageMap() {
         <motion.div className="text-center mb-12" variants={fadeInUpVariant}>
           <h2 className="text-4xl font-bold mb-4">Service Coverage Across Delhi NCR</h2>
           <p className="text-lg text-muted-foreground">
-            We serve all major cities with fast response times
+            We serve these cities with fast response times
           </p>
         </motion.div>
 

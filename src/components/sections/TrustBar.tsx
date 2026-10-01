@@ -9,7 +9,7 @@ export function TrustBar() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.5 });
 
-  const installations = useCountUp(1000, isInView ? 2 : 0);
+  const installations = useCountUp(3000, isInView ? 2 : 0);
   const years = useCountUp(13, isInView ? 2 : 0);
   const coverage = useCountUp(7, isInView ? 2 : 0);
 

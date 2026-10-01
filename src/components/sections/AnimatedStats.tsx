@@ -10,7 +10,7 @@ export function AnimatedStats() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.5 });
 
-  const installs = useCountUp(1000, isInView ? 2 : 0);
+  const installs = useCountUp(3000, isInView ? 2 : 0);
   const years = useCountUp(13, isInView ? 2 : 0);
   const cities = useCountUp(6, isInView ? 2 : 0);
   const satisfaction = useCountUp(98, isInView ? 2 : 0);
