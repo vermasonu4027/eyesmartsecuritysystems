@@ -49,7 +49,7 @@ export default async function ProductDetailPage({
               src={product.image}
               alt={product.name}
               fill
-              className="object-cover"
+              className="object-contain"
             />
           </div>
         )}
